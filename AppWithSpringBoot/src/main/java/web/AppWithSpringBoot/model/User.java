@@ -20,13 +20,13 @@ public class User {
     @Column(name = "name")
     @NotEmpty(message = "Поле с именем не может быть пустым.")
     @Size(min = 2, max = 255, message = "Длина имени должна составлять от 1 до 255 символов.")
-    @Pattern(regexp = "^([А-Яа-яA-Za-z]+)$", message = "Имя должно начинаться с большой буквы и состоять только из букв.")
+    @Pattern(regexp = "^[А-ЯA-Z][а-яa-z]+$", message = "Имя должно начинаться с большой буквы и состоять только из букв.")
     private String name;
 
     @Column(name = "surname")
     @NotEmpty(message = "Поле с фамилией не может быть пустым.")
     @Size(min = 2, max = 255, message = "Длина фамилии должна составлять от 1 до 255 символов.")
-    @Pattern(regexp = "^([А-Яа-яA-Za-z]+)$", message = "Имя должно начинаться с большой буквы и состоять только из букв.")
+    @Pattern(regexp = "^[А-ЯA-Z][а-яa-z]+$", message = "Имя должно начинаться с большой буквы и состоять только из букв.")
     private String surname;
 
     @Column(name = "age")
